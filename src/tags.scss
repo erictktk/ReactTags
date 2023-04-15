@@ -1,0 +1,84 @@
+$color: rgb(0, 155, 255);
+$secondColor: adjust-hue($color, 180deg);
+$activeColor: lighten($color, 15);
+
+.tags-holder{
+  display: flex;
+}
+
+.tag-label{
+  transition: .15s;
+  color: white;
+  font-size: .8rem;
+  background-color: $color;
+
+  cursor: pointer;
+
+
+  border-radius: 12px;
+  border-width: 4px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: $color;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  user-select: none;
+  margin: .5rem;
+}
+
+.tag-label:hover{
+  background-color: $activeColor;
+  border-color: $activeColor;
+  //transform: translateY(1px);
+}
+
+.tag-label.deselected{
+  transition: .1s;
+  color: $color;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 25%;
+
+  border-color: $color;
+  transform: translateY(2px);
+}
+
+.tag-label.deselected:hover{
+  
+}
+
+
+.close-button {
+  transition: .1s;
+  opacity: 20%;
+  cursor: pointer;
+  color: $color;
+}
+
+.close-button:hover{
+  opacity: 100%;
+}
+
+.close-button:active{
+  transform: scale(.9);
+}
+
+.exit-button{
+  text-shadow: 4px;
+  //border: 2px solid black;
+}
+
+.add-button {
+  color: $color;
+}
+
+.add-button:hover  {
+  color: $activeColor;
+}
+
+.add-button:active{
+  transform: scale(.9);
+}
